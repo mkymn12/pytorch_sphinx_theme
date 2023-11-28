@@ -1,27 +1,40 @@
-.. include:: ../README.rst
+.. .. include:: ../README.rst
+
+*******************
+Aizip Documentation
+*******************
 
 .. toctree::
-   :caption: Theme Documentation
-   :maxdepth: 2
-
-   installing
-   configuring
-   changelog
-
-
-.. toctree::
+    :caption: Aizip Internal APIs
     :maxdepth: 2
-    :numbered:
-    :caption: Demo Documents
 
-    demo/structure
-    demo/demo
-    demo/lists_tables
-    demo/api
+    clip_retrieval
+    sm4t
+    audiocraft
+    g2p
 
-.. toctree::
-    :maxdepth: 3
-    :numbered:
-    :caption: This is an incredibly long caption for a long menu
+.. .. toctree::
+..    :caption: Theme Documentation
+..    :maxdepth: 2
 
-    demo/long
+..    installing
+..    configuring
+..    changelog
+
+
+.. .. toctree::
+..     :maxdepth: 2
+..     :numbered:
+..     :caption: Demo Documents
+
+..     demo/structure
+..     demo/demo
+..     demo/lists_tables
+..     demo/api
+
+.. .. toctree::
+..     :maxdepth: 3
+..     :numbered:
+..     :caption: This is an incredibly long caption for a long menu
+
+..     demo/long

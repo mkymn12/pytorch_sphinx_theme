@@ -3,6 +3,10 @@ import os
 
 sys.path.append(os.path.abspath('..'))
 sys.path.append(os.path.abspath('./demo/'))
+sys.path.append(os.path.abspath('../../audio_apis/seamlessm4t_api/client/src'))
+sys.path.append(os.path.abspath('../../audio_apis/audiocraft_api/client/src'))
+sys.path.append(os.path.abspath('../../audio_apis/aizipG2P_api/client/src'))
+sys.path.append(os.path.abspath('../../clip_retrieval/aizip_clip_client_packaging/'))
 
 from pytorch_sphinx_theme import __version__
 
@@ -21,7 +25,7 @@ from pytorch_sphinx_theme import __version__
 extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.autodoc',
-    'sphinx.ext.viewcode',
+    # 'sphinx.ext.viewcode',
     'sphinxcontrib.httpdomain',
 ]
 
@@ -42,7 +46,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'PyTorch Sphinx Theme'
-copyright = u'PyTorch'
+copyright = u'Aizip, Inc'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -82,7 +86,7 @@ exclude_patterns = []
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'default'
+pygments_style = 'sphinx'
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []

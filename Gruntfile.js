@@ -5,14 +5,14 @@ module.exports = function(grunt) {
   var envJSON = grunt.file.readJSON(".env.json");
   var PROJECT_DIR = "docs/";
 
-  switch (grunt.option('project')) {
-    case "docs":
-      PROJECT_DIR = envJSON.DOCS_DIR;
-      break;
-    case "tutorials":
-      PROJECT_DIR = envJSON.TUTORIALS_DIR;
-      break;
-   }
+  // switch (grunt.option('project')) {
+  //   case "docs":
+  //     PROJECT_DIR = envJSON.DOCS_DIR;
+  //     break;
+  //   case "tutorials":
+  //     PROJECT_DIR = envJSON.TUTORIALS_DIR;
+  //     break;
+  //  }
 
   grunt.initConfig({
     // Read package.json
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
     connect: {
       server: {
         options: {
-          port: 1919,
+          port: 13004,
           base: 'docs/build',
           livereload: true
         }
@@ -165,6 +165,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-open');
   grunt.loadNpmTasks('grunt-browserify');
 
-  grunt.registerTask('default', ['clean','copy:fonts', 'copy:images', 'copy:vendor', 'browserify:dev','exec:build_sphinx','connect','open','watch']);
+  // grunt.registerTask('default', ['clean','copy:fonts', 'copy:images', 'copy:vendor', 'browserify:dev','exec:build_sphinx','connect','open','watch']);
+  grunt.registerTask('default', ['clean','copy:fonts', 'copy:images', 'copy:vendor', 'browserify:dev','exec:build_sphinx','connect','watch']);
   grunt.registerTask('build', ['clean','copy:fonts', 'copy:images', 'copy:vendor', 'browserify:build', 'uglify']);
 }
